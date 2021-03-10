@@ -1,0 +1,217 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain Cover Letter
+% LaTeX Template
+% Version 1.0 (28/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute
+% http://www.rpi.edu/dept/arc/training/latex/resumes/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%	PACKAGES
+%-------------------------------------------------------------------------------
+
+\documentclass[10pt, letterpaper]{letter}
+
+\usepackage{enumitem}
+\usepackage[pdftex,
+pdfauthor={Francisco Leon},
+pdftitle={Francisco Leon's Resume},
+pdfsubject={Hiring},
+pdfkeywords={Resume, Hire},
+pdfproducer={Latex},
+pdfcreator={Latex}]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[margin=.5in]{geometry}
+\usepackage{graphicx}
+\usepackage[weather, geometry]{ifsym}
+\hyphenation{du-ring sensors}
+\usepackage[none]{hyphenat}
+
+\pagenumbering{gobble}
+
+%-------------------------------------------------------------------------------
+%	DOCUMENT DEFS
+%-------------------------------------------------------------------------------
+
+\def\myplus{\hspace{-.3em}\raisebox{.4ex}{ \tiny +}}
+\def\cpp{C\myplus\myplus}
+\def\csharp{C\nolinebreak[4]\hspace{-.3em}\raisebox{.25ex}{ \small \#}}
+
+\def\sa{\raisebox{-.4ex}{\FilledSmallCircle\FilledSmallCircle\FilledSmallCircle\FilledSmallCircle\FilledSmallCircle}}
+\def\sb{\raisebox{-.4ex}{\FilledSmallCircle\FilledSmallCircle\FilledSmallCircle\FilledSmallCircle\SmallCircle}}
+\def\sc{\raisebox{-.4ex}{\FilledSmallCircle\FilledSmallCircle\FilledSmallCircle\SmallCircle\SmallCircle}}
+\def\sd{\raisebox{-.4ex}{\FilledSmallCircle\FilledSmallCircle\SmallCircle\SmallCircle\SmallCircle}}
+\def\se{\raisebox{-.4ex}{\FilledSmallCircle\SmallCircle\SmallCircle\SmallCircle\SmallCircle}}
+\def\sf{\raisebox{-.4ex}{\SmallCircle\SmallCircle\SmallCircle\SmallCircle\SmallCircle}}
+
+\input{personaldata.tex}
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+%	HEADER
+%-------------------------------------------------------------------------------
+
+\vfill
+
+\begin{center}
+
+    \LARGE \textbf{Francisco (Paco) Leon}\vspace{8pt}\\
+    \large
+
+    \href{mailto:\myemail}{\myemail},\ \myphone,\
+    \href{https://www.linkedin.com/in/francisco-leon-ab8178127/}
+    {\includegraphics[width=11pt]{in.png}}\\
+    \myaddress
+
+\end{center}
+
+\vfill
+
+%-------------------------------------------------------------------------------
+%	SUMMARY
+%-------------------------------------------------------------------------------
+
+RF Engineer with work experience in embedded RF driver implementation, hands-on RF system/block (PLL, LNA, DPA, TDC, XO) modeling and debugging, DSP algorithms, and test scripting. Extensive technical expertise in RF embedded systems, object-oriented programming, RF test automation, and SW/HW debug tools. Interested in RF firmware and DSP.
+
+\vfill
+
+%-------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%-------------------------------------------------------------------------------
+
+\textcolor{Blue}{
+    \large\textbf{Work Experience}
+    \vspace{1pt} % Less vspace to compensate 'p' downwards
+    \hrule height 1.5pt
+}
+
+\begin{itemize}[label=$\bullet$, leftmargin=1em]
+
+    \item
+    \textbf{Innophase Inc. \hfill San Diego, CA}\vspace{2pt}\\
+    \textbf{Senior RF Systems Engineer \hfill Apr. 2017 \textendash\ Present}\vspace{2pt}
+    \begin{itemize}[nosep, leftmargin=1.15em]
+        \item Designed and implemented RF drivers and calibration routines in C for embedded IoT and cellular SoCs.
+        \item Debugged and solved FW integration with HW, on digital simulation and target HW using CPU tracing tools.
+        \item Maintained regression-testing suite on Gitlab, implementing FW API, digital simulation, and Python scripts.
+        \item Uncovered root cause for simulation/measurement mismatchs, using RF lab instruments and Python+Matlab models.
+        \item Maintained Python DUT+equipment API, adding modularity, version control, scripting, and data analysis.
+        % \item Implemented 802.11g/n, BT, BLE, LTE, and NR Python and Matlab modem scripts for design verification.
+	% \item Modeled innovative RF polar architecture in Matlab, analyzing block- and system-level performances.
+    \end{itemize}
+
+\vfill
+
+    \item
+    \textbf{Midtronics Inc. \hfill Chicago, IL}\vspace{2pt}\\
+    \textbf{Software Test Engineer \hfill May 2016 \textendash\ Mar. 2017}\vspace{2pt}
+    \begin{itemize}[nosep, leftmargin=1.15em]
+	\item Created and executed test plans for embedded systems, revealing undiscovered issues in 20\myplus\ different products.
+	\item Designed and maintained automated testing tools and scripts in \csharp, reducing testing time from days to hours.
+        \item Managed issue tracking platform JIRA, improving project reporting and drastically reducing escaped defects.
+    \end{itemize}
+
+\vfill
+
+    \item
+    \textbf{Technical University of Madrid \hfill Madrid, Spain}\vspace{2pt}\\
+    \textbf{Radar Research Assistant \hfill Jul. 2013 \textendash\ Jul. 2015}\vspace{2pt}
+    \begin{itemize}[nosep, leftmargin=1.15em]
+	\item Designed in Matlab and tested prototype of signal and data processing chains for collision-avoidance radar system.
+	\item Drafted and assembled mm-waves radar hardware, improving past performances and allowing new applications.
+        \item Advised European Border Agency Frontex in deployable technologies for EU border surveillance projects.
+    \end{itemize}
+
+\end{itemize}
+
+\vfill
+
+%-------------------------------------------------------------------------------
+%	EDUCATION
+%-------------------------------------------------------------------------------
+
+\textcolor{Blue}{
+    \large\textbf{Education}
+    \vspace{3pt}
+    \hrule height 1.5pt
+}
+
+\begin{itemize}[label=$\bullet$, leftmargin=1em]
+
+    \item
+    \textbf{Illinois Institute of Technology\hfill Chicago, IL}\vspace{2pt}\\
+    \textbf{MS, Electrical Engineering\hfill Aug. 2016}\vspace{2pt}
+    \begin{itemize}[nosep, leftmargin=1.15em]
+	\item GPA 4.0/4.0
+	\item Relevant work: SW/HW design of SDR on Zedboard+AD9364, FFT algorithms VHDL implementation and synthesis.
+    \end{itemize}
+
+\vfill
+
+    \item
+    \textbf{Technical University of Madrid\hfill Madrid, Spain}\vspace{2pt}\\
+    \textbf{MS, Telecommunications Engineering\hfill Aug. 2016}\vspace{2pt}
+    \begin{itemize}[nosep, leftmargin=1.15em]
+	\item GPA 8.73/10
+	\item Relevant work: Matlab implementation of MIMO algorithms and wireless channel estimation.
+    \end{itemize}
+
+\vfill
+
+    \item
+    \textbf{Technical University of Madrid\hfill Madrid, Spain\vspace{2pt}}\\
+    \textbf{BS, Telecommunications Engineering\hfill Jun. 2014}\vspace{2pt}
+    \begin{itemize}[nosep, leftmargin=1.15em]
+    	\item GPA 7.91/10. Class top 5\%.
+	\item Relevant work: FSK transceiver on breadboard, GSM radio interface characterization.
+    \end{itemize}
+
+\end{itemize}
+
+\vfill
+
+%-------------------------------------------------------------------------------
+%	SKILLS & PUBLICATIONS
+%-------------------------------------------------------------------------------
+
+\begin{minipage}[t]{.47\linewidth}
+    \textcolor{Blue}{
+        \large\textbf{Skills}
+        \vspace{3pt}
+        \hrule height 1.5pt
+	\vspace{6pt}
+    }
+    \begin{itemize}[leftmargin=5.3em]
+        \item[\sa] Python, git, C, Matlab, SA, SG, PS, DMM, VNA, Loadpull, Spanish (native)
+        \item[\sb] VHDL, gdb, LabView, SystemVue, Linux
+        \item[\sc] \cpp, SystemC
+        \item[\sd] \csharp, German (B2)
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.51\linewidth}
+    \textcolor{Blue}{
+        \large\textbf{Publications}
+        \vspace{3pt}
+        \hrule height 1.5pt
+	\vspace{6pt}
+    }
+    \begin{itemize}[label=$\bullet$, leftmargin=1em]
+	\item \href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=7346261&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fxpls\%2Fabs\_all.jsp\%3Farnumber\%3D7346261}{``Processing chain of a radar network for safety improvement in the usage of heavy machinery," European Radar Conference (EuRAD), Paris 2015}.
+	\item \href{http://www.mdpi.com/1424-8220/14/3/3921}{``On the Use of Low-Cost Radar Networks for Collision Warning Systems Aboard Dumpers," MDPI Sensors 2014}.
+    \end{itemize}
+\end{minipage}
+
+\vfill
+
+\end{document}
