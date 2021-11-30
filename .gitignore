@@ -1,3 +1,5 @@
+personaldata.tex
 *.aux
 *.log
 *.out
+*.gz
